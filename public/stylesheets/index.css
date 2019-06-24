@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#play {
+    width: 3em; height: 3em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+ #hot {
+    width: 1.2em; height: 1.2em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+.nav{
+    background-color: #DF0001;
+    position: relative;
+}
+.nav>img{
+    height: 60px;;
+}
+.nav>span{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    color: #F6F6FB;
+}
+.nav>a{
+    font-size: 20px;
+    font-weight: bold;
+    border: #F6F6FB 2px solid;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    color: #F6F6FB;  
+}
+.page{
+    margin: 0 350px;
+    background-color: white;
+}
+.tab{
+    background-color: red;
+    text-align: center;
+}
+.tab>ul{
+    display: inline-block;
+}
+.tab>ul>li{
+    float: left;
+    margin: 20px 90px;
+}
+.tab>ul>li:first-child{
+    color: white
+}
+.page-1{
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-left-color: #999;
+    border-right-color: #999;
+    margin: 0 auto;
+}
+.page-1>.new-song-list>h2{
+    font-size: 20px;
+    margin-top: 30px;
+    color: black;
+    border-left: 5px solid #DF0001;
+    padding: 0px 10px;
+}
+.page-1>.new-song-list>ul>li{
+    padding: 5px 10px;
+    margin: 10px 10px;
+    border-bottom: 1px solid #999;;
+    position: relative;
+}
+.page-1>.new-song-list>ul>li>span{
+    color:#999;
+    font-size: 12px;
+}
+.page-1>.new-song-list>ul>li>#hot{
+    margin-top: 2px;
+}
+.page-1>.new-song-list>ul>li>#play{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+.page-1>.new-song-list>ul>li>a>h3{
+    font-size: 14px;
+    font-weight: 800;
+}
+.page1,.page2,.page3{
+    display: none;
+}
+.page1.active{
+    display: block;
+}
+.page2.active{
+    display: block;
+}
+.page3.active{
+    display: block;
+}
+.page-1>.channel-list{
+    overflow: hidden;
+}
+.page-1>.channel-list>h2{
+    font-size: 20px;
+    margin: 30px 0px;
+    color: black;
+    border-left:5px solid #DF0001;
+    padding: 0px 10px;
+}
+.page-1>.channel-list>ul{
+    padding: 40px 0;
+    display: inline-block;
+    margin: 0 127px;
+    text-align: center;
+}
+.page-1>.channel-list>ul>li{
+    float: left;
+    padding: 20px 35px;
+    font-size: 7px;
+}
+.page-1>.channel-list>ul>li>a>img{
+    height: 100px;
+    width: 150px;
+    border: solid 2px #cccccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.search>h2{
+    font-size: 17px;
+    padding: 40px 0;
+}
+.search>h2>input{
+    background-color: #999;
+    height: 30px;
+    width: 400px;
+    margin-right: 20px;
+}
+
+.search>.wapper>.history{
+    margin: 20px 0;
+}
+.search>.wapper>.history>li{
+    float: left;
+    padding: 2px 10px;
+    margin: 15px 10px;
+    font-size: 12px;
+    background-color:rgb(223, 219, 219);
+    border-radius: 5px;
+}
+.search>.wapper>.hotSearch{
+    margin: 20px 0;
+}
+.search>.wapper>.hotSearch>li{
+    float: left;
+    padding: 2px 10px;
+    margin: 15px 10px;
+    font-size: 12px;
+    background-color:rgb(223, 219, 219);
+    border-radius: 5px;
+}
+
+.search>.searchResult{
+    margin-top: 20px;
+}
+.search>.searchResult>li{
+    padding: 5px 10px;
+    border-bottom: 1px solid #aaa;;
+    position: relative;
+    margin-bottom: 20px;
+}
+.search>.searchResult>li>a>#hot{
+    margin-top: 2px;
+
+}
+.search>.searchResult>li>a>#play{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    color: white;
+}
+.search>.searchResult>li>a>h3{
+    font-size: 15px;
+}
+.search>.searchResult>li>a>span{
+    position: absolute;
+    color:rgb(194, 187, 187);
+    font-size: 12px;
+    bottom: 20%;
+    left: 3%;
+}
+.icon {
+    width: 2em; height:2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: red;
+ }

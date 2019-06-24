@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    font-size: 16px;
+    overflow: hidden;
+}
+.icon {
+    width: 2em; height:2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+ }
+ .clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wapper{
+    margin:0 350px;
+    padding: 20px 30px;
+    background-color:  #999;
+    height: 100vh;
+}
+.nav{
+    padding: 20px;
+    height: 80px;
+    position: relative;
+}
+.nav>.back{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+.nav>.content{
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+.nav>.content>.name{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+    color: white;
+}
+.nav>.content>.singer{
+    position: absolute;
+    top: 100%;
+    width: 80%;
+    color: #777;
+    font-size: 15px;
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+.voice{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    margin: 20px 0;
+    width: 80%;
+}
+.voice>svg{
+    width: 1em;
+    height:1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.voice>.voice-num{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    margin: 0 auto;
+    height: 3px;
+    width: 80%;
+    background-color: rgb(70, 68, 68);
+    border-radius: 5px;
+
+}
+.voice>.voice-num>.voice{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: 0 auto;
+    height: 4px;
+    background-color:rgb(192, 196, 192);
+    width: 50%;
+
+}
+.voice>.voice-num>.voice>.dot{
+    position: absolute;
+    top: -100%;
+    left:100%;
+    margin: 0 auto;
+    border: solid 5px white;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background-color:gray;
+}
+.banner.active{
+    display: block;
+}
+.lyric.active{
+    display: block;
+}
+.banner{
+    display: none;
+    margin: 10px auto;
+    border: 9px solid #555;
+    height: 320px;
+    width: 320px;
+    background-color: black;
+    border-radius: 50%;
+    animation: rotate 8s linear infinite;
+    animation-play-state: paused;
+    margin: 92.5px auto;
+}
+.banner>img{
+    margin: 10px 10px;
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border-radius: 50%;
+}
+.lyric{
+    display: none;
+    padding: 10px;
+    margin: 0px auto;
+    width: 70%;
+    height: 453px;
+    overflow: hidden;
+    text-align: center;
+    animation: linear 1s;
+    color:#555;
+    margin: 25px auto;
+}
+.lyric>p:nth-child(2){
+    color: black;
+}
+.lyric>p{
+    margin: 30px;
+}
+.play{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.play>ul{
+    margin:0 auto;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+.play>ul>li{
+    display: inline;
+    padding-bottom: 30px;
+    margin:20px 10px;
+}
+.play>.process{
+    position: relative;
+    margin: 10px auto;
+    width: 80%;
+    background-color: gray;
+    height: 5px;
+}
+.process>.process-num{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: rgb(30, 31, 30);
+    border-radius: 5px;
+}
+.process>.process-dot{
+    position: absolute;
+    top: -50%;
+    margin: 0 auto;
+    border: solid 5px white;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background-color:gray;
+}
+.play>.pause{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
