@@ -126,9 +126,6 @@ a{
     padding: 0px 10px;
 }
 .page-1>.channel-list>ul{
-    padding: 40px 0;
-    display: inline-block;
-    margin: 0 127px;
     text-align: center;
 }
 .page-1>.channel-list>ul>li{
@@ -137,7 +134,7 @@ a{
     font-size: 7px;
 }
 .page-1>.channel-list>ul>li>a>img{
-    height: 100px;
+    height: 150px;
     width: 150px;
     border: solid 2px #cccccc;
     border-radius: 3px;

@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var recommend_channel_list_Router = require('./routes/recommend_channel_list');
+var searchRouter = require('./routes/search');
 var channelRouter = require('./routes/channel');
 var songRouter = require('./routes/song');
 var getTopRouter = require('./routes/getTop');
@@ -36,6 +38,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/recommend_channel_list', recommend_channel_list_Router);
+app.use('/search', searchRouter);
 app.use('/channel*', channelRouter);
 app.use('/song*', songRouter);
 app.use('/getTop', getTopRouter);
@@ -43,7 +47,7 @@ app.use('/getSong', getSongRouter);
 app.use('/getChannelList', getChannelListRouter);
 app.use('/getChannel', getChannelRouter);
 app.use('/getHotSearch', getHotSearchRouter);
-app.use('search', getSearchRouter);
+app.use('/searchSong', getSearchRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

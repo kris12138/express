@@ -36,7 +36,7 @@
         bindEvents() {
             let songs = []
             $.ajax({
-                url: 'http://localhost:3000/getTop',
+                url: '/getTop',
                 async: false,
                 success: function (result) {
                     songs = result.songs.list

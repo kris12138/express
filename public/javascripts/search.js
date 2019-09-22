@@ -79,14 +79,14 @@
         bindEvents() {
             let hotSearch = []
             $.getJSON({
-                url: 'http://localhost:3000/getHotSearch/',
+                url: '/getHotSearch/',
                 async: false,
                 success: function (data) {
                     hotSearch = data.data.hotkey
                 }
             })
             this.model.data.historySearch = this.getStorage()
-            this.model.data.hotSearch = hotSearch
+            this.model.data.hotSearch = hotSearch.splice(1,10)
             this.view.renderHotSearch(this.model.data.hotSearch)
             this.view.renderHistorySearch(this.model.data.historySearch)
 
@@ -97,7 +97,7 @@
                 this.model.data.historySearch = this.getStorage()
                 let songs = []
                 $.ajax({
-                    url: 'http://localhost:3000/search/' + content,
+                    url: '/searchSong/' + content,
                     async: false,
                     success: function (data) {
                         songs = JSON.parse(data).data.info
@@ -116,7 +116,7 @@
                 this.model.data.searchContent = content
                 let songs = []
                 $.ajax({
-                    url: 'http://localhost:3000/getSearch/' + content,
+                    url: '/getSearch/' + content,
                     async: false,
                     success: function (data) {
                         songs = JSON.parse(data).data.info

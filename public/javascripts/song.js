@@ -24,7 +24,7 @@
             let hash = search.split('=')[1]
             let song = {}
             $.ajax({
-                url: 'http://localhost:3000/getSong/' + hash,
+                url: '/getSong/' + hash,
                 async: false,
                 success: function (result) {
                     song = JSON.parse(result).data

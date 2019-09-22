@@ -30,7 +30,7 @@
         bindEvents() {
             let channels = []
             $.ajax({
-                url: 'http://localhost:3000/getChannelList',
+                url: '/getChannelList',
                 async: false,
                 success: function (result) {
                     channels = JSON.parse(result).plist.list.info

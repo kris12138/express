@@ -1,37 +1,37 @@
 {
     let view = {
         el: '.page>.tab',
-        render(data) {
-            console.log(data,'k')
-            let parent = $('.page>.tab>ul>li')
+        render() {
+            let parent = $('.page>.tab>ul>li>a')
             for (let i = 0; i < 3; i++) {
-                if (parent[i].id === data) {
-                    parent[i].style['color'] = 'white'
-                    $('.page>.page-1>.page' + (i + 1))[0].className += ' active'
-                }
-                else {
-                    parent[i].style['color'] = 'black'
-                    $('.page>.page-1>.page' + (i + 1))[0].className = $('.page>.page-1>.page' + (i + 1))[0].className.replace(' active', '')
-                }
+                parent[i].style['color'] = 'black'
+            }
+            let href = window.location.pathname
+            console.log(window)
+            if (href === '/recommend_channel_list') {
+                parent[1].style['color'] = 'white'
+                $('.page>.page-1>.page2')[0].className += ' active'
+            }
+            else if (href === '/') {
+                parent[0].style['color'] = 'white'
+                $('.page>.page-1>.page1')[0].className += ' active'
+            }
+            else if (href === '/search') {
+                parent[2].style['color'] = 'white'
+                $('.page>.page-1>.page3')[0].className += ' active'
             }
         }
     }
     let model = {
         data: {
-            activeTab: 'song'
+            activeTab: ''
         }
     }
     let controller = {
         init(view, model) {
             this.view = view
             this.model = model
-            this.bindEvents()
-        },
-        bindEvents() {
-            $('.page>.tab>ul>li').click((e) => {
-                this.model.data.activeTab = e.target.id
-                this.view.render(this.model.data.activeTab)
-            })
+            this.view.render()
         }
     }
     controller.init(view, model)

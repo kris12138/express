@@ -40,7 +40,7 @@
             let hash = search.split('=')[1]
             let songs = {}
             $.ajax({
-                url: 'http://localhost:3000/getChannel/' + hash,
+                url: '/getChannel/' + hash,
                 async: false,
                 success: function (data) {
                     data = JSON.parse(data)
