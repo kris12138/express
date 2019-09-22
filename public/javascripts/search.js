@@ -56,12 +56,12 @@
         },
         getStorage() {
             let storage = window.localStorage
-            if(storage.getItem("history")){
+            if (storage.getItem("history")) {
                 let history = storage.getItem("history").split(',')
                 return history
             }
             return []
-          
+
         },
         setStorage(content) {
             let storage = window.localStorage
@@ -69,8 +69,8 @@
             if (history.length > 10) {
                 storage.setItem("history", content + ',' + history.slice(0, 10).join().replace(content + ',', ''))
             }
-            else if(history.length===0){
-                storage.setItem("history", content )
+            else if (history.length === 0) {
+                storage.setItem("history", content)
             }
             else {
                 storage.setItem("history", content + ',' + history.join().replace(content + ',', ''))
@@ -97,7 +97,7 @@
                 this.model.data.historySearch = this.getStorage()
                 let songs = []
                 $.ajax({
-                    url: 'http://localhost:3000/getSearch/' + content,
+                    url: 'http://localhost:3000/search/' + content,
                     async: false,
                     success: function (data) {
                         songs = JSON.parse(data).data.info
@@ -123,7 +123,7 @@
                     }
                 })
                 this.model.data.searchResult = songs
-    
+
             })
         }
     }

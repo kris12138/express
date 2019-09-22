@@ -43,7 +43,7 @@ app.use('/getSong', getSongRouter);
 app.use('/getChannelList', getChannelListRouter);
 app.use('/getChannel', getChannelRouter);
 app.use('/getHotSearch', getHotSearchRouter);
-app.use('/getSearch', getSearchRouter);
+app.use('search', getSearchRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

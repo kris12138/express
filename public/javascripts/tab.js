@@ -2,6 +2,7 @@
     let view = {
         el: '.page>.tab',
         render(data) {
+            console.log(data,'k')
             let parent = $('.page>.tab>ul>li')
             for (let i = 0; i < 3; i++) {
                 if (parent[i].id === data) {

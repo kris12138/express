@@ -24,10 +24,9 @@
             let hash = search.split('=')[1]
             let song = {}
             $.ajax({
-                url: 'http://localhost:3000/getSong/'+hash,
+                url: 'http://localhost:3000/getSong/' + hash,
                 async: false,
                 success: function (result) {
-                  
                     song = JSON.parse(result).data
                 }
             })
@@ -47,7 +46,7 @@
                     $('.banner').css('animation-play-state', ' paused')
                 }
             })
-            $('.voice').mouseup(function (e) {
+            $('.voice>.voice-num').mouseup(function (e) {
                 var obj = document.getElementsByClassName("voice-num")[0]
                 var left = obj.offsetLeft;
                 while (obj = obj.offsetParent) {
